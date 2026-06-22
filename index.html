@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Login Portal</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
     * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    body {
-        background-color: skyblue;
-        font-weight: 400;
-    }
+body {
+    background-color: skyblue;
+    font-weight: 400;
+}
 
     main {
         background-color: skyblue;
@@ -23,6 +24,36 @@
         align-items: center;
         flex-direction: column;
         min-height: 100vh;
+        animation-name: form;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+    }
+    
+    @keyframes form {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1.0);
+        }
+    }
+    
+    h1 {
+        animation-name: h;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.05s;
+        animation-iteration-count: 1;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes h {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
     }
     
     .form-container {
@@ -34,6 +65,226 @@
         border-radius: 8px;
     }
     
+    form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .input-user-pass {
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        animation-name: input;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes input {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    
+    .div-btn {
+        width: 100%;
+    }
+    
+    .login-btn {
+        background-color: #00f4ff;
+        width: 100%;
+        height: 50px;
+        border-radius:25px ;
+        border: none;
+        box-shadow:0 0 15px 6px #00f4ff ;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 18px;
+        transition:
+        background-color 0.3s ,
+        transform 0.3s,
+        box-shadow 0.3s ;
+        animation-name: login;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 1.5s;
+    }
+    
+        @keyframes login {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1.0);
+        }
+    }
+    
+    .login-btn:hover {
+        background-color: #00f4ff;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px 6px #00f4ff;
+    }
+    
+    .remember-forgot {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: -10px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        animation-name: re-for;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 1.5s;
+    }
+    
+        @keyframes re-for {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1.0);
+        }
+    }
+    
+    label {
+        font-size: 14px;
+        margin-top: -3px;
+        display: flex;
+        align-items: center;
+        animation-name: label;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 1.5s;
+    }
+    
+        @keyframes label {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1.0);
+        }
+    }
+    
+    a {
+
+        color: white;
+        text-decoration: none;
+        cursor:pointer;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    .Register {
+        width: 90%;
+        font-size: 12px;
+        margin-top: -5px;
+        animation-name: Register;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+    }
+    
+        @keyframes Register {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1.0);
+        }
+    }
+    
+@media (min-width: 576px) {
+    
+    body {
+        font-size: 24px;
+    }
+    .form-container {
+        width:100%;
+        max-width: 600px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        padding: 25px;
+    }
+    
+    .input-user-pass {
+        width: 100%;
+        height: 75px;
+        padding: 18px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    
+    .remember-forgot {
+        margin-top: -5px;
+        margin-bottom: 25px;
+        font-size: 18px;
+        width: 90%;
+    }
+    
+    .login-btn {
+        width: 100%;
+        height: 75px;
+        font-size: 20px;
+    }
+    
+    .Register {
+        width: 100%;
+        font-size: 16px;
+        padding: 5px;
+    }
+    
+    label {
+        font-size: 14px;
+        margin-top: -3px;
+        display: flex;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+}
+    
+    </style>
+</head>
+<body>
+    <main>
+    <div class="form-container">
+        <form>
+            <h1>Login</h1>
+                <div class="div-btn">
+                    <input type="name" id="name" name="name" placeholder="Username" class="input-user-pass">
+                </div>
+                <div class="div-btn">
+                    <input type="password" id="password" name="password" placeholder="Password" class="input-user-pass">
+                </div>
+                <div class="remember-forgot">
+                   <label><input type="checkbox" class="remember">Remember me</label>
+                   <a href="#">Forgot Password?</a>
+                </div>
+                <button  class="login-btn">Login</button>
+                <p class="Register">Don't have an account?<a href="#" class="Register">Register</a></p>
+        </form>
+    </div>
+    </main>
+</body>
+</html>
     form {
         display: flex;
         justify-content: center;
